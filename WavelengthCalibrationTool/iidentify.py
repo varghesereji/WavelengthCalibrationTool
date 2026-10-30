@@ -93,7 +93,8 @@ def SelectLinesInteractively(SpectrumX,SpectrumY,ExtraUserInput=None,comm_pipe=N
 
     # set useblit True on gtkagg for enhanced performance
     span = SpanSelector(ax, onselect, 'horizontal', useblit=True,
-                        rectprops=dict(alpha=0.5, facecolor='red'))
+                        props=dict(alpha=0.5, facecolor='red')
+                        )
 
     cid = figi.canvas.mpl_connect('key_press_event', on_key)
     plt.show()
